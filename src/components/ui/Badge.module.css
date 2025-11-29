@@ -1,0 +1,83 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* Sizes */
+.sm {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+.md {
+  height: 26px;
+  padding: 0 10px;
+  font-size: var(--font-size-xs);
+}
+
+/* Variants */
+.default {
+  background: var(--color-bg-hover);
+  color: var(--color-text-secondary);
+}
+
+.success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.danger {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.info {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+/* Category Badge */
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  background: var(--category-bg);
+  color: var(--category-color);
+  transition: all var(--transition-fast);
+}
+
+.categoryBadge.clickable {
+  cursor: pointer;
+}
+
+.categoryBadge.clickable:hover {
+  filter: brightness(1.1);
+}
+
+.categoryBadge.active {
+  background: var(--category-color);
+  color: white;
+}
+
+.categoryBadge.active .dot {
+  background-color: white !important;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+

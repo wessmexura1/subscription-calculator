@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.categoryButton:hover {
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.categoryButton.active {
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+}
+
+/* Glow effect on hover */
+.categoryButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(
+    circle at center,
+    var(--glow-color) 0%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.categoryButton:hover::before {
+  opacity: 0.1;
+}
+
+.categoryButton.active::before {
+  opacity: 0.15;
+}
+
+/* Icon wrapper */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.categoryButton:hover .iconWrapper {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.categoryButton.active .iconWrapper {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--category-color, var(--color-text-primary));
+}
+
+/* Label */
+.label {
+  transition: color var(--transition-fast);
+}
+
+/* Count badge */
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: var(--color-bg-hover);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  transition: all var(--transition-fast);
+}
+
+.categoryButton.active .count {
+  background: var(--category-color, var(--color-text-primary));
+  color: var(--color-bg-primary);
+}
+
+/* Active indicator line */
+.activeIndicator {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 3px;
+  background: var(--color-text-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .categoryButton {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .iconWrapper {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .label {
+    display: none;
+  }
+
+  .categoryButton {
+    padding: 10px;
+  }
+
+  .iconWrapper {
+    width: 28px;
+    height: 28px;
+  }
+}
+

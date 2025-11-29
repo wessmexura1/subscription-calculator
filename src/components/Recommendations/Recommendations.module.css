@@ -1,0 +1,281 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.emptyState h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-primary);
+  margin: 0 0 8px;
+}
+
+.emptyState p {
+  color: var(--color-text-tertiary);
+  max-width: 300px;
+}
+
+/* All Good Card */
+.allGoodCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-xl);
+}
+
+.allGoodIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--color-success);
+  border-radius: var(--radius-lg);
+  color: white;
+  flex-shrink: 0;
+}
+
+.allGoodContent h3 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 8px;
+}
+
+.allGoodContent p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Summary Card */
+.summaryCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: var(--radius-xl);
+}
+
+.summaryIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--color-success);
+  border-radius: var(--radius-lg);
+  color: white;
+  flex-shrink: 0;
+}
+
+.summaryContent h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  margin: 0 0 4px;
+}
+
+.savingsAmount {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-success);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.savingsAmount span {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+}
+
+.savingsSubtext {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin: 6px 0 0;
+}
+
+/* Header Badge */
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.headerBadge.warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.headerBadge.success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+/* Subscription List */
+.subscriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subscriptionItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--color-bg-tertiary);
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-fast);
+}
+
+.subscriptionItem:hover {
+  background: var(--color-bg-elevated);
+}
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.itemIcon.warning {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.itemIcon.success {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.itemName {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 6px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.itemMeta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.itemCost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.monthlyCost {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.costPerHour {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+}
+
+.costPerHour.good {
+  color: var(--color-success);
+}
+
+.itemActions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .subscriptionItem {
+    flex-wrap: wrap;
+  }
+
+  .itemInfo {
+    order: 1;
+    flex-basis: calc(100% - 56px);
+  }
+
+  .itemCost {
+    order: 2;
+    flex-basis: 50%;
+    align-items: flex-start;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .itemActions {
+    order: 3;
+    flex-basis: 50%;
+    justify-content: flex-end;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--color-border-subtle);
+  }
+
+  .summaryCard {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
