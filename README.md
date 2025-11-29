@@ -28,29 +28,6 @@
 - Адаптивный дизайн
 - Тёмная тема
 
-## 🚀 Запуск
-
-### Установка зависимостей
-
-```bash
-cd subscription-calculator
-npm install
-```
-
-### Запуск в режиме разработки
-
-```bash
-npm run dev
-```
-
-Приложение будет доступно по адресу `http://localhost:5173`
-
-### Сборка для продакшена
-
-```bash
-npm run build
-```
-
 ## 🛠 Технологии
 
 - **React 18** + TypeScript
@@ -80,34 +57,3 @@ src/
 ├── App.tsx             # Главный компонент
 └── main.tsx            # Точка входа
 ```
-
-## 📊 Формулы расчёта
-
-### Месячная стоимость
-```
-monthly_cost = price / billing_period_months
-```
-
-### Часы использования в месяц
-```
-hours_per_month = hours_per_week * 4.33
-```
-
-### Стоимость часа
-```
-cost_per_hour = monthly_cost / hours_per_month
-```
-
-### Оценка ценности (Value Score)
-```
-value_score = (importance * hours_per_month) / monthly_cost * 100
-```
-
-## 🎨 Дизайн
-
-Приложение выполнено в строгом минималистичном стиле:
-- Тёмная тема с оттенками серого
-- Шрифт Manrope
-- Плавные анимации
-- Адаптивная сетка
-
